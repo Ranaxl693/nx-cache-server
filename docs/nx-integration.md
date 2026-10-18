@@ -1,6 +1,7 @@
 # Official protocol and Nx 23.3.0 integration
 
 Primary specification: https://nx.dev/docs/kb/self-hosted-caching (retrieved 2026-10-18).
+The official OpenAPI document is stored at [openapi.json](./openapi.json) for future tooling and implementation reference. It is a static specification file; the cache server does not currently expose an OpenAPI endpoint.
 Version check: `nx@23.3.0` from npm, `dist/src/tasks-runner/cache.js`, `getHttpCache()` constructs native `HttpRemoteCache` when `NX_SELF_HOSTED_REMOTE_CACHE_SERVER` is set, except for the WASM build. Native implementation runs HTTP through Rust/reqwest. The included real-client test is the compatibility authority; curl alone cannot prove archive restoration.
 
 ## HTTP contract

@@ -61,6 +61,7 @@ Tokens accept 32–256 characters from letters, digits, `_`, `-`; generate with 
 
 - [Architecture](docs/architecture.md)
 - [Protocol and Nx 23.3.0 integration](docs/nx-integration.md)
+- [Nx remote cache OpenAPI specification](docs/openapi.json)
 - [Security and operational limitations](docs/security.md)
 - [Validation and acceptance evidence](docs/validation.md)
 - [Troubleshooting](docs/troubleshooting.md)
