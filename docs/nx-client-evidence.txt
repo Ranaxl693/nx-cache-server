@@ -1,0 +1,4 @@
+        if (process.env.NX_SELF_HOSTED_REMOTE_CACHE_SERVER) {
+            if (native_1.IS_WASM) {
+                logger_1.logger.warn('The HTTP remote cache is not yet supported in the wasm build of Nx.');
+            return new native_1.HttpRemoteCache();

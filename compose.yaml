@@ -1,0 +1,25 @@
+services:
+  cache:
+    build: .
+    ports:
+      - '127.0.0.1:8080:8080'
+    environment:
+      HOST: 0.0.0.0
+      # Local loopback port publishing only; remote use needs a real TLS proxy.
+      TRUST_TLS_PROXY: 'true'
+      CACHE_READ_TOKEN: ${CACHE_READ_TOKEN:?Set CACHE_READ_TOKEN}
+      CACHE_WRITE_TOKEN: ${CACHE_WRITE_TOKEN:?Set CACHE_WRITE_TOKEN}
+      MAX_ARTIFACT_BYTES: ${MAX_ARTIFACT_BYTES:-536870912}
+    volumes:
+      - cache-data:/data
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    pids_limit: 64
+    mem_limit: 512m
+    cpus: 1
+    stop_grace_period: 15s
+volumes:
+  cache-data:
