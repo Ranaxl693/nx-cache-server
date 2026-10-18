@@ -1,0 +1,109 @@
+{
+  "nxVersion": "23.3.0",
+  "node": "v24.19.0",
+  "results": {
+    "A": {
+      "durationMs": 309,
+      "output": "\n> nx run fixture:build\n\n> node task.mjs\r\n\r\n(node:255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\nTASK_EXECUTED\n\n\n\n NX   Successfully ran target build for project fixture\n\n\n  Run duration:      59ms\n  Cache:             0/1 hit (0%)\n  Critical path:     57ms (1 task)\n  Recoverable time:  <1ms\n"
+    },
+    "BClearedLocal": {
+      "durationMs": 230,
+      "output": "\n> nx run fixture:build  [remote cache]\n\n> node task.mjs\r\n\r\n(node:255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\nTASK_EXECUTED\n\n\n\n NX   Successfully ran target build for project fixture\n\nNx read the output from the cache instead of running the command for 1 out of 1 tasks.\n\n  Run duration:      3ms\n  Cache:             1/1 hit (100%)\n  Critical path:     1ms (1 task)\n  Recoverable time:  <1ms\n"
+    },
+    "B": {
+      "durationMs": 222,
+      "output": "\n> nx run fixture:build  [remote cache]\n\n> node task.mjs\r\n\r\n(node:255) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\nTASK_EXECUTED\n\n\n\n NX   Successfully ran target build for project fixture\n\nNx read the output from the cache instead of running the command for 1 out of 1 tasks.\n\n  Run duration:      3ms\n  Cache:             1/1 hit (100%)\n  Critical path:     1ms (1 task)\n  Recoverable time:  <1ms\n"
+    },
+    "C": {
+      "durationMs": 316,
+      "output": "\n> nx run fixture:build\n\n> node task.mjs\r\n\r\n(node:417) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.\n(Use `node --trace-warnings ...` to show where the warning was created)\nTASK_EXECUTED\n\n\n\n NX   Successfully ran target build for project fixture\n\n\n  Run duration:      66ms\n  Cache:             0/1 hit (0%)\n  Critical path:     64ms (1 task)\n  Recoverable time:  <1ms\n"
+    },
+    "D": {
+      "unauthenticated": 401,
+      "readOnlyWrite": 403
+    },
+    "E": {
+      "persistedAfterRestart": true
+    }
+  },
+  "events": [
+    {
+      "event": "cache_miss",
+      "id": "e8cd9290-40f9-421d-b133-04f5ab38a884"
+    },
+    {
+      "event": "request",
+      "id": "e8cd9290-40f9-421d-b133-04f5ab38a884",
+      "status": 404,
+      "durationMs": 3
+    },
+    {
+      "event": "request",
+      "id": "90513b72-5566-4a06-8d65-707614180c77",
+      "status": 200,
+      "durationMs": 4
+    },
+    {
+      "event": "cache_hit",
+      "id": "460fbc02-3bb0-4adb-89af-ce444c211083"
+    },
+    {
+      "event": "request",
+      "id": "460fbc02-3bb0-4adb-89af-ce444c211083",
+      "status": 200,
+      "durationMs": 4
+    },
+    {
+      "event": "cache_hit",
+      "id": "878aedbb-3107-4bd5-9d32-8c0e9bfdc122"
+    },
+    {
+      "event": "request",
+      "id": "878aedbb-3107-4bd5-9d32-8c0e9bfdc122",
+      "status": 200,
+      "durationMs": 1
+    },
+    {
+      "event": "cache_miss",
+      "id": "99ff1824-7b6c-49cb-807d-56248ff0ed34"
+    },
+    {
+      "event": "request",
+      "id": "99ff1824-7b6c-49cb-807d-56248ff0ed34",
+      "status": 404,
+      "durationMs": 0
+    },
+    {
+      "event": "request",
+      "id": "b17391c8-ab30-437e-adab-104646dc6bda",
+      "status": 200,
+      "durationMs": 2
+    },
+    {
+      "event": "request_error",
+      "id": "65c5fff1-ce9a-441d-9e45-b185b0ff81eb",
+      "status": 401
+    },
+    {
+      "event": "request",
+      "id": "65c5fff1-ce9a-441d-9e45-b185b0ff81eb",
+      "status": 401,
+      "durationMs": 1
+    },
+    {
+      "event": "request_error",
+      "id": "5d8831d5-4330-4442-a9e0-3541eabfc7c6",
+      "status": 403
+    },
+    {
+      "event": "request",
+      "id": "5d8831d5-4330-4442-a9e0-3541eabfc7c6",
+      "status": 403,
+      "durationMs": 0
+    },
+    {
+      "event": "cache_hit",
+      "id": "94740300-4d78-4ce8-8a25-1fb9bc0cd0b7"
+    }
+  ]
+}
